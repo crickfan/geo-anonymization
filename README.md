@@ -36,9 +36,13 @@ from anony import anony
   
   The script will run roughly 20 searches per second, if too slow it means that Nominatim server is used instead of Google, which is not a good sign. Results are in 'sample_addresses_anon.csv', which looks like:
   
+  
   ,ID,lat,lon
+  
 1,12345,52.52,13.38
+
 2,67890,52.51,13.37
+
 
   Don't worry it looks better in Excel. Please try this sample first before using it on your own file. 
   
