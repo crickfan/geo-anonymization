@@ -24,12 +24,14 @@ Although the script relies on the other server (Nominatim, open street map) as a
 
 2. How to run the sample:
 
-  2.1 Import function
+  2.1 Import the script and function
+  
   Switch your working directory to where the anony.py script is. In the python console type and enter:
 import anony
 from anony import anony
 
   2.2 Type and enter:
+  
   anony('sample_addresses.csv', 'utf-8', 'Germany', 'your google api key here')
   
   The script will run roughly 20 searches per second, if too slow it means that Nominatim server is used instead of Google, which is not a good sign. Results are in 'sample_addresses_anon.csv', which looks like:
