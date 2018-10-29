@@ -10,7 +10,7 @@ geo location anonymization for IMAGEN project
 Although the script relies on the other server (Nominatim, open street map) as a backup in case Google can not find geo-location, it provides much less coverage than Google. You will find many missing locations if you use Nominatim alone. 
   
   1.2 Make sure the file formatting is correct. 
-    Open your file with a text editor instead of Excel for checking because Excel would render the display so you won't be able to use what the file really look like.
+    Open your file with a text editor instead of Excel for checking because Excel would render the display so you won't be able to see what the file really look like.
     Make sure ID are not quoted, addresses are quoted; two columns are separated by comma. Please refer to the sample_addresses.csv for formatting.
     
   1.3 Know the file encoding of your file. 
