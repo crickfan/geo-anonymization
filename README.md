@@ -49,6 +49,7 @@ from anony import anony
 3. Run the script for your own address file:
 
   3.1 If you are in west Europe, for your own file you can probably trying 'cp1252' as the encoding parameter first if you are not sure about encoding.
+  
   3.2 The country is provided as an additional parameter, and will be appended to the addresses to ensure accurate location searching. If you already got country information in your file, you can put '' (blank string) in the parameter for country.
 
   
