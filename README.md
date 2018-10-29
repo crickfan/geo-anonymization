@@ -27,8 +27,11 @@ Although the script relies on the other server (Nominatim, open street map) as a
   2.1 Import the script and function
   
   Switch your working directory to where the anony.py script is. In the python console type and enter:
+  
 import anony
+
 from anony import anony
+
 
   2.2 Type and enter:
   
