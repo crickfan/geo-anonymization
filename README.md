@@ -49,6 +49,7 @@ from anony import anony
 
   Don't worry it looks better in Excel. Please try this sample first before using it on your own file. 
   
+
 3. Run the script for your own address file:
 
   3.1 If you are in west Europe, for your own file you can probably trying 'cp1252' as the encoding parameter first if you are not sure about encoding.
