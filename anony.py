@@ -59,6 +59,7 @@ def anony(file, fileEncoding, country, google_api_key):
         g = geocoder.google(('%s, %s')% (address, country),key=google_api_key)
         time.sleep(0.05)
         ltln = g.latlng
+        print(('%s')% address)
     
         # if address not found try a second geolocator
         if ltln is None:
