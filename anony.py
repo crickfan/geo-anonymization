@@ -21,7 +21,9 @@ changelog:
             Common encodings include 'utf-8', 'cp1252' (for ANSI encodig), 'gb2312' (for Chinese). File will 
             not be able to load if wrong encoding info is provided.
             
-    
+    01 Nov 2018 by Zuo Zhang
+        1. bug fix: The address was always appended with 'Germany' before submitted to the Nomintim server, 
+            which is fixed. Google server search was not affected.
 
 """
 
@@ -60,7 +62,7 @@ def anony(file, fileEncoding, country, google_api_key):
     
         # if address not found try a second geolocator
         if ltln is None:
-            g2 = Nominatim(user_agent="IMAGEN").geocode(('%s, Germany')%address)
+            g2 = Nominatim(user_agent="IMAGEN").geocode(('%s, %s')% (address, country))
             time.sleep(1.05)
             # if address still not found store NaNs
             if g2 is None:
