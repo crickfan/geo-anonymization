@@ -24,6 +24,9 @@ changelog:
     01 Nov 2018 by Zuo Zhang
         1. bug fix: The address was always appended with 'Germany' before submitted to the Nomintim server, 
             which is fixed. Google server search was not affected.
+			
+	20 Feb 2019 by Zuo Zhang
+		1. The server used for geolocating was added to the last column of the output, either Google or Nominatim.
 
 """
 
@@ -47,6 +50,7 @@ def anony(file, fileEncoding, country, google_api_key):
     latlon['ID'] = addresses['ID']
     lats = []
     lons = []
+    servers = []
     
     # for loop to convert each address to lat lon
     for i in range(1, n+1):
@@ -61,7 +65,7 @@ def anony(file, fileEncoding, country, google_api_key):
         ltln = g.latlng
         print(('%s')% address)
     
-        # if address not found try a second geolocator
+        # if address not found from google, try a second geolocator
         if ltln is None:
             g2 = Nominatim(user_agent="IMAGEN").geocode(('%s, %s')% (address, country))
             time.sleep(1.05)
@@ -69,6 +73,7 @@ def anony(file, fileEncoding, country, google_api_key):
             if g2 is None:
                 lats.append(np.nan)
                 lons.append(np.nan)
+                servers.append(np.nan)
     
             # store information from second geocoder
             else:
@@ -76,6 +81,7 @@ def anony(file, fileEncoding, country, google_api_key):
                 lats.append(lat2)
                 lon2 = round(g2.longitude, 2)
                 lons.append(lon2)
+                servers.append('Nominatim')
     
         # store info from first geocoder
         else:
@@ -83,10 +89,12 @@ def anony(file, fileEncoding, country, google_api_key):
             lats.append(lat)
             lon = round(ltln[1], 2)
             lons.append(lon)
+            servers.append('Google')
     
     # store all info together lat long in dataframe
     latlon['lat'] = lats
     latlon['lon'] = lons
+    latlon['server'] = servers
     missing = latlon['lat'].isnull().sum()
     print('There are %d address(s) that cannot be found.' %missing)
     
