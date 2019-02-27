@@ -32,8 +32,8 @@ last update: 20 Feb 2019
 
 ### 2.1 Import function
   Switch your working directory to where the anony.py script is. In the python console, type and press enter:
-import anony
-from anony import anony
+  import anony
+  from anony import anony
 
 ### 2.2 Type and press enter:
   anony('sample_addresses.csv', 'utf-8', 'Germany', 'your google api key here')
