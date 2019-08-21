@@ -1,7 +1,7 @@
 # geo-anonymization
 geo location anonymization for the IMAGEN project
 
-last update: 20 Feb 2019
+last update: 21 Aug 2019
 
 
 ## 1. Befor using the script, you will need:
