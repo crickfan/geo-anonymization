@@ -55,6 +55,7 @@ If you are in west Europe, for your own file you can probably try 'cp1252' for t
   
 ### 3.2
 The country is provided as an additional parameter, and will be appended to the addresses to ensure accurate location searching. If you already got country information in your file, you can put '' (blank string) in the parameter for country.
+Please be careful that some participants may live in different countries (due to moving, etc.), in this case leave the country parameter as a blank string('').
 
 ### 3.3 
 Select a few rows and manually check whether the geolocations are correct, by searching on Google map. Pay special attention to those labelled as 'Nominatim', which means that this address can be found by Nominatim but not by Google, and so is a bit suspecious.
