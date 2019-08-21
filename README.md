@@ -11,7 +11,7 @@ last update: 21 Aug 2019
    You can apply one here: https://cloud.google.com/maps-platform/?apis=places
    Select "Places" on the prodect selection page. You will need to provide your bank details, but you won't be charged for the current project because the usage is tiny. Full pricing list is here: https://cloud.google.com/maps-platform/pricing/sheet/?_ga=2.114431171.555751564.1540810985-327939475.1540810985
     
-   Although the script relies on the other server (Nominatim, open street map) as a backup in case Google can not find geo-location, it provides much less coverage than Google. You will find many missing locations if you use Nominatim alone. 
+   Although the script relies on the other server (Nominatim, open street map) as a backup in case Google can not find geo-location, it provides much less coverage than Google. 
   
 ### 1.2 Make sure the file formatting is correct. 
     
