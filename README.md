@@ -44,6 +44,7 @@ last update: 21 Aug 2019
   
   ,ID,lat,lon
 1,12345,52.52,13.38,Google
+
 2,67890,52.51,13.37,Google
 
   It looks better if you view it in Excel. Please try this example file first before using it on your own file. 
